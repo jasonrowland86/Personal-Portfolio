@@ -1,28 +1,88 @@
 .App {
+  line-height: 1.7em;
+  /*color: #7f8c8d;*/
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: helvetica;
+}
+
+body {
+
+}
+
+.headshot {
+  max-width: 100%;
+  height: auto;
+}
+
+/*-----Nav-----*/
+.nav {
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.nav-header {
+
+}
+.nav-list {
+  margin-left: auto;
+}
+.nav ul {
+  display: flex;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+.nav li {
+  color: white;
+  margin-right: 10px;
+}
+
+/*-----Main-----*/
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.title {
+  text-align: center;
+  flex: 1;
+}
+.projects {
+  display: flex;
+  justify-content: center;
+}
+.project {
+  text-align: center;
+  flex-direction: row;
+  min-height: 30vh;
+  width: 25vw;
+  border: 1px solid black;
+}
+.project:hover {
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.about {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+/*-----Footer-----*/
+footer {
+  display: flex;
+  text-align: center;
+  height: 50px;
+  background-color: black;
   color: white;
 }
-
-.App-title {
-  font-size: 1.5em;
+footer a {
+  color: white;
 }
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.icon {
+  margin: 10px;
 }
