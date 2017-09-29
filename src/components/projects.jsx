@@ -1,22 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Projects = (props) => {
+const Projects = () => {
   return(
-    <div className="Projects">
-      <div className="projects">
-        <div className="project" data-id="project1" onClick={this.props.handleClick('project1')}>
-          Project 1
-        </div>
-        <div className="project" data-id="project2" onClick={this.props.handleClick('project2')}>
-          Project 2
-        </div>
-        <div className="project" data-id="project3" onClick={this.props.handleClick('project3')}>
-          Project 3
-        </div>
-        <div className="project" data-id="project4" onClick={this.props.handleClick('project4')}>
-          Project 4
-        </div>
+    <div className="projects">
+      <div className="project">
+        <Link to="/project1">Project 1</Link>
+      </div>
+      <div className="project">
+        <Link to="/project2">Project 2</Link>
+      </div>
+      <div className="project">
+        <Link to="/project3">Project 3</Link>
+      </div>
+      <div className="project">
+        <Link to="/project4">Project 4</Link>
       </div>
     </div>
   )

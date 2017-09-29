@@ -1,10 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return(
-    <div class="main about">
-      <h1>About Me</h1>
-      <h3>Head Shot</h3>
+    <div className="about-main">
+      <div className="headshot">
+        <div className="img">
+          <img src="https://i.imgur.com/7XoDsPA.jpg"/>
+        </div>
+      </div>
+      <div className="about">
+        <div className="about-content">
+          <h2>
+              I moved to New York from Houston in 2009. I worked as a bike messenger
+            for several years before becoming a kettlebell trainer and property
+            rennovator in Detroit. I am now looking to build new things in the world of web
+            development. I am fascinated by many things and like to know the how and why.
+          </h2>
+          <br/>
+        <Link to="/" className="back">Back</Link>
+        </div>
+      </div>
     </div>
   )
 }
