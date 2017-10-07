@@ -7,6 +7,7 @@ const Project1 = () => {
       <div className="title">
         <h1>Project 1</h1>
         <h2>Coming Soon</h2>
+        <a href="http://jasonrowland-simongame.bitballoon.com/"></a>
       </div>
       <Projects />
     </div>

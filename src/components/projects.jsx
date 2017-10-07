@@ -7,8 +7,8 @@ const Projects = () => {
       <div className="project">
         <Link to="/project1">Project 1</Link>
       </div>
-      <div className="project">
-        <Link to="/project2">Project 2</Link>
+      <div className="project p-2">
+        <Link to="/project2"></Link>
       </div>
       <div className="project">
         <Link to="/project3">Project 3</Link>

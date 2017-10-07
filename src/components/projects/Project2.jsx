@@ -7,6 +7,7 @@ const Project2 = () => {
       <div className="title">
         <h1>Project 2</h1>
         <h2>Coming Soon</h2>
+        <a href="https://fightpickapp.herokuapp.com/"></a>
       </div>
       <Projects />
     </div>

@@ -60,18 +60,26 @@ body {
 }
 .projects {
   display: flex;
-  justify-content: center;
 }
 .project {
   text-align: center;
-  flex-direction: row;
-  min-height: 30vh;
-  width: 25vw;
+  /*flex-direction: row;*/
+  min-height: 25vh;
+  min-width: 25vw;
   border: 1px solid black;
 }
 .project:hover {
-  background: rgba(0, 0, 0, 0.2);
   cursor: pointer;
+}
+.p-1 {
+  background: url("https://s3.us-east-2.amazonaws.com/jasonrowland.co/simon.png")
+}
+.p-2 {
+  background: url("https://s3.us-east-2.amazonaws.com/jasonrowland.co/fight-pick-app.png");
+  background-size: cover;
+}
+.p-2:hover {
+
 }
 
 /*-----About-----*/
