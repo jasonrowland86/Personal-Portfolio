@@ -6,7 +6,7 @@ const About = () => {
     <div className="about-main">
       <div className="headshot">
         <div className="img">
-          <img src="https://s3.us-east-2.amazonaws.com/jasonrowland.co/headshot1.JPG"/>
+          <img className="profile-img" src="https://s3.us-east-2.amazonaws.com/jasonrowland.co/headshot1.JPG"/>
         </div>
       </div>
       <div className="about">

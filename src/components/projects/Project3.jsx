@@ -3,10 +3,17 @@ import Projects from '../Projects';
 
 const Project3 = () => {
   return(
-    <div class="main">
+    <div className="main">
       <div className="title">
-        <h1>Project 3</h1>
-        <h2>Coming Soon</h2>
+        <div className="content">
+          <h2>Aquarium App</h2>
+          <h3>A Ruby on Rails CRUD web app that uses CSS animations to make an aquarium
+          of fish swim around.</h3>
+          <h3>HTML, CSS, Javascript, Ruby on Rails</h3>
+          <br></br>
+          <a href="https://aquarium-app.herokuapp.com/" target="blank" >View</a>
+          <div className="project-gif"></div>
+        </div>
       </div>
       <Projects />
     </div>

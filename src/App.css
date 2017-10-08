@@ -11,6 +11,10 @@
 body {
 
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 
 /*-----Nav-----*/
 .nav {
@@ -47,38 +51,49 @@ body {
   text-align: center;
   flex: 1;
 }
+
+.name {
+  display: flex;
+  margin-bottom: 5vh;
+}
+.statement {
+  display: flex;
+}
 .title {
+  display: flex;
   flex: 1;
+  align-self: center;
+  margin-top: 10vh;
+
 }
 .title h1 {
-  margin-top: 20vh;
-  font-size: 50px;
+  margin-top: .5em;
+  font-size: 3em;
+  line-height: 1em;
 }
 .title h2 {
-  margin-top: 5vh;
-  font-size: 20px;
+  margin-top: .2em;
+  font-size: 1.5em;
+}
+.project-container {
+  margin: 0 auto;
 }
 .projects {
   display: flex;
-}
-.project {
-  text-align: center;
-  /*flex-direction: row;*/
-  min-height: 25vh;
-  min-width: 25vw;
-  border: 1px solid black;
+  width: 90vw;
+  margin: 20px auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .project:hover {
   cursor: pointer;
 }
-.p-1 {
-  background: url("https://s3.us-east-2.amazonaws.com/jasonrowland.co/simon.png")
-}
-.p-2 {
-  background: url("https://s3.us-east-2.amazonaws.com/jasonrowland.co/fight-pick-app.png");
-  background-size: cover;
-}
-.p-2:hover {
+.project-img {
+  width: 150px;
+  height: 150px;
 
 }
 
@@ -106,10 +121,11 @@ body {
   width: 50vw;
   height: 50vh;
 }
-img {
+.profile-img {
   height: 50vh;
   width: auto;
   border-radius: 5px;
+  margin-left: 30px;
 }
 .back {
   color: black;
@@ -152,15 +168,16 @@ footer a {
     width: 50vw;
     height: 50vh;
   }
-  img {
-    height: 50vh;
-    width: auto;
-    border-radius: 5px;
-  }
   .img {
     position: absolute;
     left: 50%;
     top: 35%;
     transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (max-width: 334px) {
+  .title  {
+    margin-top: 1em;
   }
 }
