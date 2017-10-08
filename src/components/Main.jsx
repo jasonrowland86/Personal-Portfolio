@@ -10,7 +10,7 @@ const Main = () => {
               <h1>Jason Rowland</h1>
             </div>
             <div className="statement">
-              <h2>Web Developer in New York City</h2>
+              <h2>Web Developer | New York City</h2>
             </div>
           </div>
         </div>
