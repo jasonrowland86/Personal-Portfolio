@@ -5,9 +5,7 @@ const About = () => {
   return(
     <div className="about-main">
       <div className="headshot">
-        <div className="img">
-          <img className="profile-img" src="https://s3.us-east-2.amazonaws.com/jasonrowland.co/headshot1.JPG"/>
-        </div>
+        <img className="profile-img" src="https://s3.us-east-2.amazonaws.com/jasonrowland.co/headshot1.JPG"/>
       </div>
       <div className="about">
         <div className="about-content">
