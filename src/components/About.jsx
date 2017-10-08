@@ -15,7 +15,6 @@ const About = () => {
             rennovator in Detroit. I am now looking to build new things in the world of web
             development. I am fascinated by many things and like to know the how and why.
           </h2>
-          <br/>
         <Link to="/" className="back">Back</Link>
         </div>
       </div>

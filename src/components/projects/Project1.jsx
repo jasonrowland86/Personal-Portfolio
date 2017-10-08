@@ -11,7 +11,6 @@ const Project1 = () => {
             <br></br>
             <h3>The classic game Simon. Made with Javascript.</h3>
             <h3>HTML, CSS, Javascript</h3>
-            <br></br>
             <a href="http://jasonrowland-simongame.bitballoon.com/" target="blanks">View</a>
           </div>
           <div className="project-gif"></div>

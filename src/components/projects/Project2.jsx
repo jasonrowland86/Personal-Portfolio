@@ -12,7 +12,6 @@ const Project2 = () => {
           to let users search for and compare two fighters. A user can make and
           save their fight picks for an up coming event.</h3>
           <h3>HTML, Node.js, Express, PostgreSQL</h3>
-          <br></br>
           <a href="https://fightpickapp.herokuapp.com/" target="blank" >View</a>
           <div className="project-gif"></div>
         </div>
