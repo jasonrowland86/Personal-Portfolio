@@ -59,10 +59,12 @@ a {
 }
 .name {
   display: flex;
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
+  justify-content: center;
 }
 .statement {
   display: flex;
+  justify-content: center;
 }
 .title {
   display: flex;
@@ -152,6 +154,11 @@ footer a {
 .icon {
   margin: 18px 20px 10px 20px;
 }
+@media only screen and (min-width: 525px) {
+  .break {
+    display: none;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   /*-----About-----*/
@@ -176,5 +183,8 @@ footer a {
 @media only screen and (max-width: 334px) {
   .title  {
     margin-top: 1em;
+  }
+  .break {
+    display: inline-block;
   }
 }
