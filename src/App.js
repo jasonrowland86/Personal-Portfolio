@@ -44,7 +44,7 @@ class App extends Component {
           <Route exact path="/project2" component={Project2} />
           <Route exact path="/project3" component={Project3} />
           <Route exact path="/project4" component={Project4} />
-          <Route exact path="/about" component={About} pageChange={this.pageChange}/>
+          <Route exact path="/projects" component={Projects} pageChange={this.pageChange}/>
           <Footer />
         </div>
       </Router>

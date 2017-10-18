@@ -1,5 +1,4 @@
 import React from 'react';
-import Projects from '../Projects';
 
 const Project2 = () => {
   return(
@@ -12,11 +11,12 @@ const Project2 = () => {
           to let users search for and compare two fighters. A user can make and
           save their fight picks for an up coming event.</h3>
           <h3>HTML, Node.js, Express, PostgreSQL</h3>
-          <a href="https://fightpickapp.herokuapp.com/" target="blank" >View</a>
+          <a href="https://fightpickapp.herokuapp.com/" target="blank" >View App</a><br></br>
+          <a href="https://github.com/jasonrowland86/Project-2-App" target="blank" >View on GitHub</a>
           <div className="project-gif"></div>
+          <img className="project-img" src="https://s3.us-east-2.amazonaws.com/jasonrowland.co/fight-pick-app.png"></img>
         </div>
       </div>
-      <Projects />
     </div>
   )
 }

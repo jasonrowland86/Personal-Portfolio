@@ -9,20 +9,20 @@
   font-family: 'Didact Gothic', sans-serif;;
 }
 body {
-
+  color: #222324
 }
 a {
   text-decoration: none;
-  color: black;
 }
 
 /*-----Nav-----*/
 .nav {
-  background: black;
+  background: #222324;
   color: white;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  height: 7vh;
 }
 .nav-header {
 
@@ -33,18 +33,17 @@ a {
 .nav ul {
   display: flex;
 }
-
 .nav a {
   text-decoration: none;
   color: white;
 }
 .nav li {
   color: white;
-  margin-right: 10px;
+  margin-right: 3vw;
+  margin-top: 1vh;
 }
 
 /*-----Main-----*/
-
 .main {
   display: flex;
   flex-direction: column;
@@ -71,7 +70,6 @@ a {
   flex: 1;
   align-self: center;
   margin-top: 5vh;
-
 }
 .title h1 {
   margin-top: .5em;
@@ -82,16 +80,35 @@ a {
   margin-top: .2em;
   font-size: 1.5em;
 }
+.hr {
+  width: 75vw;
+  margin: 0 auto;
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+}
+
+/*Project Container*/
 .project-container {
   margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.flex {
+  margin-top: 5vh;
+  align-self: center;
+  flex: 1;
+}
+.project {
+  margin: 0 4px;
+  /*flex-basis: calc(50% - 100px);*/
 }
 .projects {
   display: flex;
-  width: 90vw;
-  margin: 20px auto;
+  width: 80vw;
+  margin: 0 auto;
   margin-bottom: 10px;
   margin-top: 10px;
-
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -99,52 +116,107 @@ a {
   cursor: pointer;
 }
 .project-img {
-  width: 150px;
-  height: 150px;
+  width: 320px;
+  height: 225px;
+}
+.project-gif {
+  margin-bottom: 5vh;
+}
+.project-component {
+  display: none;
+}
 
+/*Contact Form*/
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background: #353A7D;
+  padding: 5vh;
+  padding-top: 8vh;
+}
+#connect {
+  font-size: 20px;
+  margin-bottom: 3vh;
+  color: #C0C0C7;
+}
+#email-invalid {
+  color: white;
+  display: none;
+}
+#gform {
+  align-self: center;
+  width: 50vw;
+}
+form-item {
+  display: flex;
+}
+label {
+  color: #C0C0C7;
+}
+input {
+  padding: 3px;
+  outline: none;
+}
+textarea {
+  width: 250px;
+  height: 75px;
+}
+.submit {
+  background: #C0C0C7;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;;
+  margin-top: 3vh;
+  font-weight: bold;
+}
+.submit:hover {
+  cursor: pointer;
+  color: white;
+  background: #222324;
+  transition: .1s;
 }
 
 /*-----About-----*/
 .about-main {
   display: flex;
   flex-direction: row;
+  margin: 0 10vw;
+  margin-bottom: 8vh;
   flex: 1;
-  text-align: center;
 }
 .about {
   flex: 1;
-  margin: 0 auto;
+  margin-left: 3vw;
   margin-top: 5vh;
 }
 .about h2 {
-  margin-top: 18vh;
-  margin-bottom: 5px;
+  margin-top: 3vh;
 }
 .about-content {
-  margin: 50px;
+  flex: 1;
 }
 .headshot {
   flex: 1;
-  margin-top: 19vh;
   width: 100%;
-
 }
 .profile-img {
   height: auto;
   width: 300px;
   border-radius: 5px;
-  margin: 10px;
+  margin-top: 5vh;
 }
 .back {
   color: black;
   text-decoration: none;
 }
+
 /*-----Footer-----*/
 footer {
   display: flex;
   text-align: center;
   height: 50px;
-  background-color: black;
+  background-color: #222324;
   color: white;
   justify-content: center;
 }
@@ -154,13 +226,28 @@ footer a {
 .icon {
   margin: 18px 20px 10px 20px;
 }
+
+@media only screen and (min-width: 1230px) {
+  .projects {
+    width: 60%;
+  }
+}
 @media only screen and (min-width: 525px) {
   .break {
     display: none;
   }
 }
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 850px) {
+  .projects {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .projects {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 770px) {
   /*-----About-----*/
   .about-main {
     display: flex;
@@ -178,13 +265,47 @@ footer a {
   .headshot {
     margin-top: 5vh;
   }
+  .projects {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 525px) {
+  .projects {
+    width: 100%;
+  }
+  .title {
+    margin: 0px;
+  }
 }
 
-@media only screen and (max-width: 334px) {
+@media only screen and (max-width: 375px) {
   .title  {
     margin-top: 1em;
   }
+  .project-img {
+    width: 200px;
+    height: 125px;
+  }
+  .projects {
+    width: 100%;
+  }
   .break {
     display: inline-block;
+  }
+  .profile-img {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+  .hr {
+    margin: 0 auto;
+  }
+  .about-content {
+    margin-bottom: 2vh;
+  }
+  #gform {
+    width: 100%;
+  }
+  .headshot {
+    margin: 0;
   }
 }

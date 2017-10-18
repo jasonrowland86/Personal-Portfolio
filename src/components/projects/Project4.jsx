@@ -1,5 +1,4 @@
 import React from 'react';
-import Projects from '../Projects';
 
 const Project4 = () => {
   return(
@@ -12,11 +11,11 @@ const Project4 = () => {
           web app. Built with React and Express, an admin can create and manage
           a project by assigning tasks to project memebers.</h3>
           <h3>HTML, CSS, Javascript, React, Express,  PostgreSQL</h3>
-          <a href="https://github.com/RajisteB/Occurio" target="blank" >View</a>
+          <a href="https://github.com/RajisteB/Occurio" target="blank" >View on GitHub</a>
           <div className="project-gif"></div>
+          <img className="project-img" src="https://s3.us-east-2.amazonaws.com/jasonrowland.co/okurio-app.png"></img>
         </div>
     </div>
-      <Projects />
     </div>
   )
 }
