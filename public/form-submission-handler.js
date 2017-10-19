@@ -79,4 +79,15 @@ function loaded() {
   var form = document.getElementById('gform');
   form.addEventListener("submit", handleFormSubmit, false);
 };
+
+// show project info on click
+let projects = document.getElementsByClassName("project-component");
+projects.addEventListener("click", showProject);
+
+function showProject(event) {
+  console.log('showing project');
+  event.preventDefault;
+  
+}
+
 document.addEventListener('DOMContentLoaded', loaded, true);
