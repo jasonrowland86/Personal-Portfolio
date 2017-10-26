@@ -131,18 +131,18 @@ a {
   display: flex;
   flex-direction: column;
   align-self: center;
-  background: #14AFCC;
+  /*background: #14AFCC;
   background: -webkit-linear-gradient(#14AFCC, #1B7687);
   background: -o-linear-gradient(#14AFCC, #1B7687);
   background: -moz-linear-gradient(#14AFCC, #1B7687);
-  background: linear-gradient(#14AFCC, #1B7687);
+  background: linear-gradient(#14AFCC, #1B7687);*/
   padding: 5vh;
   padding-top: 8vh;
 }
 #connect {
   font-size: 20px;
   margin-bottom: 3vh;
-  color: #C0C0C7;
+  color: #222324;
 }
 #email-invalid {
   color: white;
@@ -156,7 +156,7 @@ form-item {
   display: flex;
 }
 label {
-  color: #C0C0C7;
+  color: #222324;
 }
 input {
   padding: 3px;
