@@ -218,7 +218,14 @@ textarea {
 }
 
 /*-----Web Icons-----*/
-
+.webicons {
+  display: flex;
+  justify-content: space-around;
+  background-color: #DCE4E5;
+}
+.webicon {
+  width: 3.5em;
+}
 
 /*-----Footer-----*/
 footer {
