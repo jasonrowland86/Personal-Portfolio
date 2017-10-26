@@ -1,5 +1,6 @@
 import React from 'react';
 import About from './About';
+import WebIcons from './WebIcons';
 
 const Main = () => {
     return(
@@ -20,6 +21,7 @@ const Main = () => {
         </div>
 
         <About />
+        <WebIcons />
 
         <div className="contact">
           <div className="contact-form">
