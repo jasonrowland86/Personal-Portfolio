@@ -221,10 +221,15 @@ textarea {
 .webicons {
   display: flex;
   justify-content: space-around;
-  background-color: #DCE4E5;
+  background-color: #E3ECED;
+  background-color: #C1C9C9;
 }
 .webicon {
   width: 3.5em;
+}
+
+.webicon path {
+  fill: #37393B;
 }
 
 /*-----Footer-----*/
