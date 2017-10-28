@@ -232,6 +232,14 @@ textarea {
   fill: #37393B;
 }
 
+.bell {
+  display: flex;
+  align-items: center;
+}
+.kettlebell {
+  width: 4.5em;
+}
+
 /*-----Footer-----*/
 footer {
   display: flex;
