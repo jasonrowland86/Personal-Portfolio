@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import Main from './components/Main';
 import About from './components/About';
 import Projects from './components/Projects';
+import Resume from './components/Resume';
 //Individual Projects
 import Project1 from './components/projects/Project1';
 import Project2 from './components/projects/Project2';
@@ -24,6 +25,7 @@ class App extends Component {
     super();
     this.state = {
       about: false,
+      resume: false,
     };
     this.pageChange = this.pageChange.bind(this);
   }
@@ -31,6 +33,7 @@ class App extends Component {
   pageChange() {
     this.setState = {
       about: false,
+      resume: false,
     };
   }
 
@@ -45,6 +48,7 @@ class App extends Component {
           <Route exact path="/project3" component={Project3} />
           <Route exact path="/project4" component={Project4} />
           <Route exact path="/projects" component={Projects} pageChange={this.pageChange}/>
+          <Route exact path="/resume" component={Resume} pageChange={this.pageChange}/>
           <Footer />
         </div>
       </Router>
