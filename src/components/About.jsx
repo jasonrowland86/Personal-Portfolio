@@ -17,7 +17,7 @@ const About = () => {
             user experience.
             <br></br>
             <br></br>
-            I am currently seeking opportunities in Austin TX.
+            <div className="center-on-mobile">I am currently seeking opportunities in Austin TX.</div>
           </p>
         </div>
       </div>
