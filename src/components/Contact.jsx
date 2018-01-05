@@ -19,6 +19,7 @@ const Contact = () => {
 
           <input className="submit" type="submit" value="Send"></input>
         </form>
+
       </div>
     </div>
   )

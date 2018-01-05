@@ -38,7 +38,9 @@ const WebIcons = () => {
       </svg>
 
       <div className="bell">
-        <img src="https://s3.us-east-2.amazonaws.com/jasonrowland.co/kettlebell_darkgray.png" className="kettlebell"></img>
+        <a href="https://www.strongfirst.com/">
+          <img src="https://s3.us-east-2.amazonaws.com/jasonrowland.co/kettlebell_darkgray.png" className="kettlebell"></img>
+        </a>
       </div>
 
     </div>

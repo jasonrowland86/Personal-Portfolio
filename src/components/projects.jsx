@@ -21,7 +21,7 @@ const Projects = () => {
         <Project4 />
       </div>
 
-      <div className="flex">Projects I've created or contributed to:</div>
+      <div className="flex"><h1>Projects I've created or contributed to:</h1></div>
       <div className="projects">
         <div className="project">
           <Link to="/project3"><img className="project-img" src="https://s3.us-east-2.amazonaws.com/jasonrowland.co/aquarium-app.png"></img></Link>

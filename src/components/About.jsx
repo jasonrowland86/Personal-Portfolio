@@ -10,17 +10,14 @@ const About = () => {
       <div className="about">
         <div className="about-content">
           <p>
-            I uprooted myself to New York City from my home town of Houston in 2009.
-            I rode thousands of miles as a bike messenger, earned two certifications
-            in kettlebell training, and purchased and remodeled homes in Detroit
-            before finding a natural interest in programming. I attended General Assembly's
-            Web Development Immersive the summer of 2017. When I'm not working on
-            a project or tinkering with code I can be found swinging kettlebells
-            and eating ice cream. 
+            Born and raised in Houston Texas. I moved to New York City in 2009
+            where I was a bike messenger and kettlebell trainer before I found
+            web development. I have a proclivity for efficiency and a love for
+            design that create a natural passion for front-end development and
+            user experience.
             <br></br>
             <br></br>
-            I'm planning to move back to Texas and currently seeking opportunities
-            in Austin.
+            I am currently seeking opportunities in Austin TX.
           </p>
         </div>
       </div>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 .App {
   line-height: 1.7em;
@@ -6,10 +7,11 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Didact Gothic', sans-serif;;
+  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 body {
-  color: #222324
+  color: #222324;
 }
 a {
   text-decoration: none;
@@ -22,13 +24,11 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  height: 7vh;
-}
-.nav-header {
-
+  height: 10vh;
 }
 .nav-list {
   margin-left: auto;
+  margin-top: .7em;
 }
 .nav ul {
   display: flex;
@@ -41,6 +41,7 @@ a {
   color: white;
   margin-right: 3vw;
   margin-top: 1vh;
+  font-size: 1.3em;
 }
 
 /*-----Main-----*/
@@ -95,9 +96,13 @@ a {
   flex-direction: column;
 }
 .flex {
-  margin-top: 5vh;
+  margin-top: 3em;
+  margin-bottom: 3em;
   align-self: center;
   flex: 1;
+}
+.flex h1 {
+  font-size: 1.3em;
 }
 .project {
   margin: 0 4px;
@@ -107,8 +112,7 @@ a {
   display: flex;
   width: 80vw;
   margin: 0 auto;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 3em;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -131,11 +135,11 @@ a {
   display: flex;
   flex-direction: column;
   align-self: center;
-  /*background: #14AFCC;
-  background: -webkit-linear-gradient(#14AFCC, #1B7687);
-  background: -o-linear-gradient(#14AFCC, #1B7687);
-  background: -moz-linear-gradient(#14AFCC, #1B7687);
-  background: linear-gradient(#14AFCC, #1B7687);*/
+  background: #64E8B7;
+  /*background: -webkit-linear-gradient(#E3ECED, #1B7687);
+  background: -o-linear-gradient(#E3ECED, #1B7687);
+  background: -moz-linear-gradient(#E3ECED, #1B7687);
+  background: linear-gradient(#E3ECED, #1B7687);*/
   padding: 5vh;
   padding-top: 8vh;
 }
@@ -173,6 +177,8 @@ textarea {
   padding: 5px 10px;;
   margin-top: 3vh;
   font-weight: bold;
+  font-size: 1em;
+  font-family: 'Roboto';
 }
 .submit:hover {
   cursor: pointer;
@@ -200,6 +206,7 @@ textarea {
 .about-content {
   flex: 1;
   margin-right: 5vw;
+  text-align: left;
 }
 .headshot {
   flex: 1;
@@ -222,7 +229,7 @@ textarea {
   display: flex;
   justify-content: space-around;
   background-color: #E3ECED;
-  background-color: #C1C9C9;
+  /*background-color: #C1C9C9;*/
 }
 .webicon {
   width: 3.5em;
@@ -241,26 +248,40 @@ textarea {
 }
 
 /*-----Resume-----*/
+.resume-container {
+
+}
 embed {
   width: 80vw;
-  height: 80vh;
+  height: 100%;
 }
 .resume {
   margin: 0 auto;
-  margin-top: 3vh;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  height: 100vh;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 /*-----Footer-----*/
 footer {
   display: flex;
   text-align: center;
-  height: 50px;
+  height: 20vh;
   background-color: #222324;
   color: white;
   justify-content: center;
 }
 footer a {
   color: white;
+}
+.social-media-links {
+  display: flex;
+  width: 40vw;
+  margin: 0 auto;
+  margin-top: 1.7em;
+  justify-content: space-around;
 }
 .icon {
   margin: 18px 20px 10px 20px;

@@ -20,11 +20,9 @@ const Main = () => {
         <div className="hr">
           <hr></hr>
         </div>
-
         <About />
-        <Contact />
         <WebIcons />
-
+        <Contact />
       </div>
     )
   }

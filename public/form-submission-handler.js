@@ -49,7 +49,6 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   event.preventDefault();           // we are submitting via xhr below
   var data = getFormData();         // get the values submitted in the form
 
-
   if( !validEmail(data.mail) ) {   // if email is not valid show error
     document.getElementById('email-invalid').style.display = 'block';
     return false;
@@ -73,21 +72,12 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     xhr.send(encoded);
   }
 }
+
 function loaded() {
   console.log('contact form submission handler loaded successfully');
   // bind to the submit event of our form
   var form = document.getElementById('gform');
   form.addEventListener("submit", handleFormSubmit, false);
-};
-
-// show project info on click
-let projects = document.getElementsByClassName("project-component");
-projects.addEventListener("click", showProject);
-
-function showProject(event) {
-  console.log('showing project');
-  event.preventDefault;
-  
 }
 
 document.addEventListener('DOMContentLoaded', loaded, true);
