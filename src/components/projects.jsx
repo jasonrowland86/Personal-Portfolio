@@ -1,21 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Project1 from './projects/Project1';
+import Project2 from './projects/Project2';
+import Project3 from './projects/Project3';
+import Project4 from './projects/Project4';
 
-const Projects = (props) => {
+const Projects = () => {
   return(
-    <div className="Projects">
+    <div className="project-container">
+      <div id="p-1" className="project-component">
+        <Project1 />
+      </div>
+      <div id="p-2" className="project-component">
+        <Project2 />
+      </div>
+      <div id="p-3" className="project-component">
+        <Project3 />
+      </div>
+      <div id="p-4" className="project-component">
+        <Project4 />
+      </div>
+
+      <div className="flex">Projects I've created or contributed to:</div>
       <div className="projects">
-        <div className="project" data-id="project1" onClick={this.props.handleClick('project1')}>
-          Project 1
+        <div className="project">
+          <Link to="/project3"><img className="project-img" src="https://s3.us-east-2.amazonaws.com/jasonrowland.co/aquarium-app.png"></img></Link>
         </div>
-        <div className="project" data-id="project2" onClick={this.props.handleClick('project2')}>
-          Project 2
+        <div className="project">
+          <Link to="/project2"><img className="project-img" src="https://s3.us-east-2.amazonaws.com/jasonrowland.co/fight-pick-app.png"></img></Link>
         </div>
-        <div className="project" data-id="project3" onClick={this.props.handleClick('project3')}>
-          Project 3
+        <div className="project">
+          <Link to="/project4"><img className="project-img" src="https://s3.us-east-2.amazonaws.com/jasonrowland.co/okurio-app.png"></img></Link>
         </div>
-        <div className="project" data-id="project4" onClick={this.props.handleClick('project4')}>
-          Project 4
+        <div className="project">
+          <Link to="/project1"><img className="project-img" src="https://s3.us-east-2.amazonaws.com/jasonrowland.co/simon.png"></img></Link>
         </div>
       </div>
     </div>

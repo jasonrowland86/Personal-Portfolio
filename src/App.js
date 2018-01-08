@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import './reset.css';
 import {
@@ -13,6 +12,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Main from './components/Main';
 import About from './components/About';
+import Projects from './components/Projects';
 //Individual Projects
 import Project1 from './components/projects/Project1';
 import Project2 from './components/projects/Project2';
@@ -23,7 +23,14 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-    
+      about: false,
+    };
+    this.pageChange = this.pageChange.bind(this);
+  }
+
+  pageChange() {
+    this.setState = {
+      about: false,
     };
   }
 
@@ -33,7 +40,11 @@ class App extends Component {
         <div className="App">
           <Nav />
           <Route exact path="/" component={Main} />
-          <Route exact path="/about" component={About} />
+          <Route exact path="/project1" component={Project1} />
+          <Route exact path="/project2" component={Project2} />
+          <Route exact path="/project3" component={Project3} />
+          <Route exact path="/project4" component={Project4} />
+          <Route exact path="/projects" component={Projects} pageChange={this.pageChange}/>
           <Footer />
         </div>
       </Router>
