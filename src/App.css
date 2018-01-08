@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 .App {
   line-height: 1.7em;
@@ -6,13 +7,15 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Didact Gothic', sans-serif;;
+  font-family: 'Didact Gothic', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 body {
-  color: #222324
+  color: #222324;
 }
 a {
   text-decoration: none;
+  color: black;
 }
 
 /*-----Nav-----*/
@@ -22,10 +25,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  height: 7vh;
-}
-.nav-header {
-
+  height: 10%;
 }
 .nav-list {
   margin-left: auto;
@@ -40,7 +40,8 @@ a {
 .nav li {
   color: white;
   margin-right: 3vw;
-  margin-top: 1vh;
+  margin-top: 1.5em;
+  font-size: 1.1em;
 }
 
 /*-----Main-----*/
@@ -51,7 +52,10 @@ a {
   flex: 1;
 }
 .content {
-  width: 60vw;
+  width: 80vw;
+}
+.content h2 {
+  margin-top: 2vh;
 }
 .content h3 {
   margin-bottom: 10px;
@@ -77,7 +81,7 @@ a {
   line-height: 1em;
 }
 .title h2 {
-  margin-top: .2em;
+  margin-top: 1.5em;
   font-size: 1.5em;
 }
 .hr {
@@ -87,7 +91,7 @@ a {
   margin-bottom: 3vh;
 }
 
-/*Project Container*/
+/*-----Project Container-----*/
 .project-container {
   margin: 0 auto;
   flex: 1;
@@ -95,29 +99,41 @@ a {
   flex-direction: column;
 }
 .flex {
-  margin-top: 5vh;
+  margin-top: 3em;
+  margin-bottom: 3em;
   align-self: center;
   flex: 1;
+}
+.flex h1 {
+  font-size: 1.3em;
 }
 .project {
   margin: 0 4px;
   /*flex-basis: calc(50% - 100px);*/
 }
+
 .projects {
   display: flex;
   width: 80vw;
   margin: 0 auto;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 3em;
   justify-content: center;
   flex-wrap: wrap;
 }
 .project:hover {
   cursor: pointer;
 }
+.project-image:hover {
+  cursor: pointer;
+}
+.project-image-container {
+  width: 100vw;
+  display: flex;
+}
 .project-img {
   width: 320px;
   height: 225px;
+  margin-bottom: 3em;
 }
 .project-gif {
   margin-bottom: 5vh;
@@ -126,16 +142,16 @@ a {
   display: none;
 }
 
-/*Contact Form*/
+/*-----Contact Form-----*/
 .contact-form {
   display: flex;
   flex-direction: column;
   align-self: center;
-  /*background: #14AFCC;
-  background: -webkit-linear-gradient(#14AFCC, #1B7687);
-  background: -o-linear-gradient(#14AFCC, #1B7687);
-  background: -moz-linear-gradient(#14AFCC, #1B7687);
-  background: linear-gradient(#14AFCC, #1B7687);*/
+  background: #64E8B7;
+  /*background: -webkit-linear-gradient(#E3ECED, #1B7687);
+  background: -o-linear-gradient(#E3ECED, #1B7687);
+  background: -moz-linear-gradient(#E3ECED, #1B7687);
+  background: linear-gradient(#E3ECED, #1B7687);*/
   padding: 5vh;
   padding-top: 8vh;
 }
@@ -173,6 +189,8 @@ textarea {
   padding: 5px 10px;;
   margin-top: 3vh;
   font-weight: bold;
+  font-size: 1em;
+  font-family: 'Roboto';
 }
 .submit:hover {
   cursor: pointer;
@@ -185,21 +203,22 @@ textarea {
 .about-main {
   display: flex;
   flex-direction: row;
-  margin: 0 10vw;
   margin-bottom: 8vh;
   flex: 1;
 }
 .about {
-  flex: 1;
-  margin-left: 3vw;
+  margin: 0 auto;
   margin-top: 5vh;
+  width: 50vw;
 }
 .about h2 {
   margin-top: 3vh;
 }
 .about-content {
   flex: 1;
-  margin-right: 5vw;
+  margin: 0 auto;
+  text-align: left;
+  width: 40vw;
 }
 .headshot {
   flex: 1;
@@ -207,7 +226,7 @@ textarea {
 }
 .profile-img {
   height: auto;
-  width: 300px;
+  width: 40vw;
   border-radius: 5px;
   margin-top: 5vh;
   margin-bottom: 5vh;
@@ -219,10 +238,24 @@ textarea {
 
 /*-----Web Icons-----*/
 .webicons {
-  display: flex;
-  justify-content: space-around;
+  /* display: flex;
+  flex-direction: column;
+  background-color: #E3ECED; */
+  /*background-color: #C1C9C9;*/
+  /* justify-content: space-between; */
   background-color: #E3ECED;
-  background-color: #C1C9C9;
+}
+.webicons-inner {
+  display: flex;
+  flex-direction: row;
+  /*background-color: #C1C9C9;*/
+  justify-content: space-between;
+  width: 90vw;
+  margin: 0 auto;
+}
+.webicon img {
+margin-top: 3em;
+
 }
 .webicon {
   width: 3.5em;
@@ -232,19 +265,30 @@ textarea {
   fill: #37393B;
 }
 
-.bell {
-  display: flex;
-  align-items: center;
-}
 .kettlebell {
-  width: 4.5em;
+  width: 3.5em;
+  height: 3.5em;
+}
+
+/*-----Resume-----*/
+embed {
+  width: 80vw;
+  height: 100%;
+}
+.resume {
+  margin: 0 auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  height: 100vh;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 /*-----Footer-----*/
 footer {
   display: flex;
   text-align: center;
-  height: 50px;
+  flex: 2;
   background-color: #222324;
   color: white;
   justify-content: center;
@@ -252,8 +296,19 @@ footer {
 footer a {
   color: white;
 }
+.social-media-links {
+  display: flex;
+  width: 40vw;
+  margin: 0 auto;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  justify-content: space-around;
+}
 .icon {
   margin: 18px 20px 10px 20px;
+}
+.inline {
+  display: inline-block;
 }
 
 @media only screen and (min-width: 1230px) {
@@ -287,6 +342,15 @@ footer a {
   .about {
     flex: 1;
     margin-top: 0;
+    margin-left: 0;
+    margin: 0 auto;
+    width: 80vw;
+  }
+  .about-content {
+    flex: 1;
+    margin: 0 auto;
+    text-align: left;
+    width: 80vw;
   }
   .about h2 {
     margin-top: 0;
@@ -297,20 +361,27 @@ footer a {
   .projects {
     width: 100%;
   }
+  .profile-img {
+    width: 80vw;
+    margin-top: 0;
+  }
+  .center-on-mobile {
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 525px) {
   .projects {
     width: 100%;
   }
-  .title {
-    margin: 0px;
+  .hide-on-mobile {
+    display: none;
+  }
+  #gform {
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 375px) {
-  .title  {
-    margin-top: 1em;
-  }
   .project-img {
     width: 200px;
     height: 125px;
@@ -322,9 +393,14 @@ footer a {
   .break {
     display: inline-block;
   }
+  .flex h1 {
+    width: 80vw;
+    text-align: center;
+  }
   .profile-img {
     margin-top: 3vh;
     margin-bottom: 3vh;
+    width: 80vw;
   }
   .hr {
     margin: 0 auto;
@@ -332,10 +408,23 @@ footer a {
   .about-content {
     margin-bottom: 2vh;
   }
+  footer {
+  flex: 0;
+  }
   #gform {
     width: 100%;
   }
   .headshot {
     margin: 0;
+  }
+  .kettlebell {
+    width: 3em;
+    height: 3em;
+  }
+  .webicon img {
+    margin-top: 3.2em;
+  }
+  .comment {
+    width: 80vw;
   }
 }

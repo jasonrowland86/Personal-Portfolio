@@ -15,10 +15,12 @@ const Contact = () => {
           <span id="email-invalid">Must be a valid email address</span>
 
           <label for="message">Message:</label><br></br>
-          <textarea type="text" name="comment"></textarea><br></br>
+
+          <textarea className="comment" type="text" name="comment"></textarea><br></br>
 
           <input className="submit" type="submit" value="Send"></input>
         </form>
+
       </div>
     </div>
   )

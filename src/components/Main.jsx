@@ -12,7 +12,7 @@ const Main = () => {
               <h1>Jason Rowland</h1>
             </div>
             <div className="statement">
-              <h2>Web Developer | <br className="break"></br>New York City</h2>
+              <h2>Web Developer <span className="hide-on-mobile">|</span> <br className="break"></br><span className="inline">New York City</span></h2>
             </div>
           </div>
         </div>
@@ -20,11 +20,9 @@ const Main = () => {
         <div className="hr">
           <hr></hr>
         </div>
-
         <About />
-        <Contact />
         <WebIcons />
-
+        <Contact />
       </div>
     )
   }
