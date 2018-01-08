@@ -9,7 +9,7 @@ const Project5 = () => {
           <br></br>
           <h3>A personal business site made with React</h3>
           <h3>HTML, CSS, Javascript, React</h3>
-          <a href="http://wholeskyhealingarts.com/" target="blanks">View App</a><br></br>
+          <a href="http://wholeskyhealingarts.com/" target="blanks">View Site</a><br></br>
           <a href="https://github.com/jasonrowland86/WholeSkyHealingArts" target="blanks">View on GitHub</a>
           <div className="project-gif"></div>
           <div className="project-img-container">
