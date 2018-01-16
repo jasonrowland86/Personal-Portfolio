@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 .App {
   line-height: 1.7em;
@@ -7,8 +7,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Didact Gothic', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 body {
   color: #222324;
@@ -26,6 +25,21 @@ a {
   flex-direction: row;
   justify-content: flex-end;
   height: 10%;
+  z-index: 5;
+}
+.nav-left {
+
+}
+.nav-left h1 {
+  margin-top: .5em;
+  margin-left: .8em;
+  font-size: 2em;
+}
+.nav-right {
+
+}
+.nav-hack {
+  flex: 1;
 }
 .nav-list {
   margin-left: auto;
@@ -38,9 +52,11 @@ a {
   color: white;
 }
 .nav li {
+  letter-spacing: .1em;
   color: white;
   margin-right: 3vw;
   margin-top: 1.5em;
+  margin-bottom: .5em;
   font-size: 1.1em;
 }
 
@@ -52,17 +68,27 @@ a {
   flex: 1;
 }
 .content {
-  width: 80vw;
+  width: 100vw;
 }
 .content h2 {
-  margin-top: 2vh;
+  margin-top: 1em;
+  font-size: 1.5em;
 }
 .content h3 {
   margin-bottom: 10px;
 }
+.x-icon {
+  float: left;
+  width: 35vw;
+  color: #9C9CA3;
+  transition: color .2 ease;
+}
+.x-icon:hover {
+  cursor: pointer;
+  color: #222324;
+}
 .name {
   display: flex;
-  margin-bottom: 3vh;
   justify-content: center;
 }
 .statement {
@@ -78,11 +104,6 @@ a {
 .title h1 {
   margin-top: .5em;
   font-size: 3em;
-  line-height: 1em;
-}
-.title h2 {
-  margin-top: 1.5em;
-  font-size: 1.5em;
 }
 .hr {
   width: 75vw;
@@ -92,14 +113,32 @@ a {
 }
 
 /*-----Project Container-----*/
+.projects-component {
+
+}
+.projects-container {
+
+}
 .project-container {
+
+}
+.selected-project {
+  width: 80vw;
   margin: 0 auto;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+}
+.selected-project h1 {
+  font-size: 1.5em;
+}
+.project-content {
+  width: 100vw;
+  position: absolute;
+  top: 25%;
+  opacity: ;
+  transition: opacity 0.3s;
 }
 .flex {
-  margin-top: 3em;
+  text-align: center;
+  margin-top: 5em;
   margin-bottom: 3em;
   align-self: center;
   flex: 1;
@@ -109,12 +148,13 @@ a {
 }
 .project {
   margin: 0 4px;
+  transition: opacity .2s ease;
   /*flex-basis: calc(50% - 100px);*/
 }
 
 .projects {
   display: flex;
-  width: 80vw;
+  width: 90vw;
   margin: 0 auto;
   margin-bottom: 3em;
   justify-content: center;
@@ -122,24 +162,26 @@ a {
 }
 .project:hover {
   cursor: pointer;
+  opacity: .7;
 }
 .project-image:hover {
   cursor: pointer;
 }
-.project-image-container {
-  width: 100vw;
-  display: flex;
-}
 .project-img {
-  width: 320px;
-  height: 225px;
+  width: 35vw;
+  height: 36vh;
+  margin: .5em;
+}
+.selected-project-img {
+  width: 45vw;
+  height: 47vh;
   margin-bottom: 3em;
 }
 .project-gif {
   margin-bottom: 5vh;
 }
 .project-component {
-  display: none;
+  /* display: none; */
 }
 
 /*-----Contact Form-----*/
@@ -190,7 +232,7 @@ textarea {
   margin-top: 3vh;
   font-weight: bold;
   font-size: 1em;
-  font-family: 'Roboto';
+  font-family: 'Montserrat', sans-serif;
 }
 .submit:hover {
   cursor: pointer;
@@ -205,11 +247,12 @@ textarea {
   flex-direction: row;
   margin-bottom: 8vh;
   flex: 1;
+  width: 100%;
 }
 .about {
   margin: 0 auto;
   margin-top: 5vh;
-  width: 50vw;
+  flex: 1;
 }
 .about h2 {
   margin-top: 3vh;
@@ -218,22 +261,17 @@ textarea {
   flex: 1;
   margin: 0 auto;
   text-align: left;
-  width: 40vw;
+  width: 42vw;
 }
 .headshot {
   flex: 1;
-  width: 100%;
 }
 .profile-img {
   height: auto;
-  width: 40vw;
+  width: 42vw;
   border-radius: 5px;
   margin-top: 5vh;
   margin-bottom: 5vh;
-}
-.back {
-  color: black;
-  text-decoration: none;
 }
 
 /*-----Web Icons-----*/
