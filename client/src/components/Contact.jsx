@@ -1,29 +1,80 @@
 import React from 'react';
 
-const Contact = () => {
-  return(
-    <div className="contact">
-      <div className="contact-form">
-        <h1 id="connect">Say Hello:</h1>
+class Contact extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      clicked: true,
+      dropDown: {
+        display: 'none'
+      },
+    }
+    this.handleClicked = this.handleClicked.bind(this);
+  }
 
-        <form id="gform" action="https://script.google.com/macros/s/AKfycbykilkmzLY8Y0ZjvNTiDsxWociKdvOBCbftGNRGJdkUlt8NXxs/exec" method="POST">
-          <label for="name">Name:</label><br></br>
-          <input id="name" type="text" name="name" size="30"></input><br></br>
+  handleClicked() {
+    if(!this.state.clicked) {
+      this.setState({
+        clicked: true,
+      });
+    } else {
+      this.setState({
+        clicked: false,
+      });
+    }
+    this.showContactForm();
+  }
 
-          <label for="email">Your Email:</label><br></br>
-          <input type="text" name="mail" size="30"></input><br></br>
-          <span id="email-invalid">Must be a valid email address</span>
+  showContactForm() {
+    if(this.state.clicked) {
+      this.setState({
+        dropDown: {
+          display: 'inline-block'
+        },
+        switchStyle: {
+          cursor: 'text',
+          fontSize: '1.5em',
+          marginBottom: '3vh',
+          color: '#222324',
+          transition: 'none',
+          transform: 'none'
+        }
+      });
+    }
+    setTimeout(this.scrollDown, 100);
+  }
 
-          <label for="message">Message:</label><br></br>
+  scrollDown() {
+    window.scrollTo({top: 1000, left: 0, behavior: 'smooth'});
+  }
 
-          <textarea className="comment" type="text" name="comment"></textarea><br></br>
+  render() {
+    return(
+      <div className="contact">
 
-          <input className="submit" type="submit" value="Send"></input>
-        </form>
+        <div className="contact-form">
 
+          <h1 onClick={this.handleClicked} style={this.state.switchStyle}>Contact</h1>
+
+          <form style={this.state.dropDown} id="gform" action="https://script.google.com/macros/s/AKfycbykilkmzLY8Y0ZjvNTiDsxWociKdvOBCbftGNRGJdkUlt8NXxs/exec" method="POST">
+            <label for="name">Name:</label><br></br>
+            <input id="name" type="text" name="name" size="30"></input><br></br>
+
+            <label for="email">Your Email:</label><br></br>
+            <input type="text" name="mail" size="30"></input><br></br>
+            <span id="email-invalid" style={{color: 'black'}}>Must be a valid email address</span>
+
+            <label for="message">Message:</label><br></br>
+
+            <textarea className="comment" type="text" name="comment"></textarea><br></br>
+
+            <input className="submit" type="submit" value="Send"></input>
+          </form>
+
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default Contact;
