@@ -44,12 +44,13 @@ class Nav extends React.Component {
     return(
       <div className="nav" style={this.state.navPosition}>
         <div className="nav-left">
-          <Link to="/"><h1>jr</h1></Link>
+          <ul>
+            <li><a href="http://jasonrowland.co">jr</a></li>
+          </ul>
         </div>
         <div className="nav-hack"></div>
         <div className="nav-right">
           <ul className="nav-list">
-              <li><a href="http://jasonrowland.co">&frasl;</a></li>
               <li><Link to="/projects">Projects</Link></li>
               <li><Link to="/resume">Resume</Link></li>
           </ul>

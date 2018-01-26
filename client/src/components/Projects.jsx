@@ -9,7 +9,7 @@ class Projects extends React.Component {
       projects: projects,
       clicked: false,
       show: {
-        zIndex: -3,
+        zIndex: -5,
         opacity: 0,
       }
     }
@@ -18,7 +18,6 @@ class Projects extends React.Component {
 
   //Handle clicked on project
   handleClicked(e) {
-
     console.log('Clicked!', e.currentTarget.id);
     const id = e.currentTarget.id;
     if(!this.state.clicked) {
@@ -34,11 +33,6 @@ class Projects extends React.Component {
     }
     //Call on click to hide project links and
     //to render the selected project. See below.
-    if(this.state.clicked) {
-
-    }
-    // window.scroll({top: 0, left: 0, behavior: 'smooth'});
-
     this.showOrHideProjects();
     this.renderProjectData(e);
   }
@@ -50,7 +44,6 @@ class Projects extends React.Component {
         dropDown: {
           transition: '1s cubic-bezier(0.25,0.1,0.25,1)',
           transform: 'translateY(0%)',
-          zIndex: 0,
         }
       });
     } else {
@@ -58,7 +51,6 @@ class Projects extends React.Component {
         dropDown: {
           transition: '.5s cubic-bezier(0.25,0.1,0.25,1)',
           transform: 'translateY(-130%)',
-          zIndex: 3
         }
       });
     }
@@ -79,25 +71,34 @@ class Projects extends React.Component {
         show: {
           zIndex: 0,
           opacity: 1,
-          transition: 'opacity 1.5s ease-in-out',
+          transition: 'opacity .5s ease-in-out',
         },
+        hide: {
+          opacity: 0,
+        }
       })
     } else {
       this.setState({
         show: {
-          zIndex: -3,
+          zIndex: -5,
           opacity: 0,
+        },
+        hide: {
+          opacity: 1,
+          transition: 'opacity .5s ease-in-out',
         }
       })
     }
-    this.scrollTop();
+    this.scrolltoTop();
+    // setTimeout(this.setState({
+    //   dropDown: {
+    //     display: 'none'
+    //   }
+    // }), 3000);
   }
 
-  scrollTop() {
+  scrolltoTop() {
     window.scroll({top: 0, left: 0, behavior: 'smooth'});
-  }
-  timeout() {
-    setTimeout(this.scroll(), 2000);
   }
 
   //Specifically get the project by matching the
@@ -113,22 +114,22 @@ class Projects extends React.Component {
 
   //Render the projects to the component
   renderProjectImages() {
-    let projects = this.state.projects;
     return (
-              <div style={this.state.dropDown}>
-                <div className="flex"><h1>Projects I've created or contributed to:</h1></div>
-                <div className="projects">
-                  {projects.map((project) =>(
-                    <div onClick={this.handleClicked} className="project" id={project.id}>
-                      <img className="project-img" src={project.data.image}></img>
-                    </div>
-                  ))}
-                </div>
+            <div style={this.state.dropDown}>
+              <div className="flex"><h1>Projects I've created or contributed to:</h1></div>
+              <div className="projects">
+                {this.state.projects.map((project) =>(
+                  <div onClick={this.handleClicked} className="project" id={project.id}>
+                    <img className="project-img" src={project.data.image}></img>
+                  </div>
+                ))}
               </div>
+            </div>
           )
   }
 
   render() {
+    let count = 1;
     return(
       <div className="projects-component">
 
@@ -136,8 +137,17 @@ class Projects extends React.Component {
           {this.renderProjectImages()}
         </div>
 
-        <div className="project-container">
-          <div className="main project-content" style={this.state.show}>
+        <div className="numbered-links">
+          <div className="links">
+            {this.state.projects.map((project) =>(
+              <h1 onClick={this.handleClicked} id={project.id}>{count++}</h1>
+            ))}
+          </div>
+          <h1 className="select-project" style={this.state.hide}>Select a Project</h1>
+        </div>
+
+        <div className="project-container" style={this.state.show}>
+          <div className="main project-content">
             <FontAwesome onClick={this.handleClicked} className="x-icon" name="times" size="lg"/>
             <div className="selected-project">
               <h1>{this.state.name}</h1>
