@@ -86,7 +86,7 @@ class WebIcons extends React.Component {
             </div>
             <h2 className='hover'>Kettlebells</h2>
           </div>
-          
+
         </div>
 
       </div>

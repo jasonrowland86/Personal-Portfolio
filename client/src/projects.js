@@ -8,7 +8,8 @@ const projects = [
       images: [
         'https://s3.us-east-2.amazonaws.com/jasonrowland.co/wholesky-app.png',
         'https://s3.us-east-2.amazonaws.com/jasonrowland.co/wholesky-app-1.png',
-        'https://s3.us-east-2.amazonaws.com/jasonrowland.co/wholesky-app-2.png'
+        'https://s3.us-east-2.amazonaws.com/jasonrowland.co/wholesky-app-2.png',
+        'https://s3.us-east-2.amazonaws.com/jasonrowland.co/wholesky-app-4.png'
       ],
       appLink: 'http://wholeskyhealingarts.com/',
       githubLink: 'https://github.com/jasonrowland86/WholeSky-React-Express',

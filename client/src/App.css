@@ -258,34 +258,34 @@ a {
   margin-bottom: 3em;
 }
 /* Testing fade*/
-.example-enter {
+/* .selectedImage-enter {
   opacity: 0.01;
 }
 
-.example-enter.example-enter-active {
+.selectedImage-enter.selectedImage-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
 
-.example-leave {
+.selectedImage-leave {
   opacity: 1;
 }
 
-.example-leave.example-leave-active {
+.selectedImage-leave.selectedImage-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
-}
-/* .fade {
-	animation:fade 3s linear;
-	-webkit-animation:fade 3s linear;
+} */
+.fade {
+	animation:fade .2s ease-in-out;
+	-webkit-animation:fade .2s ease-in-out;
 }
 @keyframes fade
 {
-  0%   {opacity:1}
+  0%   {opacity:0}
   33.333% { opacity: 0}
   66.666% { opacity: 0}
   100% { opacity: 1}
-} */
+}
 .numbered-links {
   display: none;
 }
@@ -602,12 +602,9 @@ footer a {
     display: block;
   }
   .projects-container {
-
+		display: none;
   }
   .project-container {
-    /* position: absolute;
-    top: 0;
-    left: 0; */
     margin-top: 5em;
     flex: 1;
   }

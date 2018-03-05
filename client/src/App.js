@@ -14,8 +14,6 @@ import Main from './components/Main';
 import About from './components/About';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
-//Individual Projects
-import Project from './components/Project';
 
 class App extends Component {
   constructor(){

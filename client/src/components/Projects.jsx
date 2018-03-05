@@ -2,6 +2,8 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import projects from '../projects.js';
 import Dot from './Dot';
+import SelectedImage from './SelectedImage';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 class Projects extends React.Component {
   constructor() {
@@ -40,12 +42,6 @@ class Projects extends React.Component {
     this.renderProjectData(e);
   }
 
-  // componentDidMount() {
-  //   this.setState({
-  //     projects: projects,
-  //   })
-  // }
-
   //Hide projects with css animation. Called on click.
   showOrHideProjects() {
     if(this.state.clicked) {
@@ -64,43 +60,7 @@ class Projects extends React.Component {
     }
   }
 
-  //Set state to with corresponding project data.
-  // renderProjectData(e) {
-  //   console.log('Rendering project:', e.currentTarget.id);
-  //   let project = this.selectProject(e.currentTarget.id);
-  //   if(project) {
-  //     this.setState({
-  //       name: project.data.name,
-  //       description: project.data.description,
-  //       technologies: project.data.technologies,
-  //       image: project.data.images.image1,
-  //       images: project.data.images,
-  //       image1: project.data.images[0],
-  //       image2: project.data.images[1],
-  //       image3: project.data.images[2],
-  //       appLink: project.data.appLink,
-  //       githubLink: project.data.githubLink,
-  //       showProject: {
-  //         display: 'block'
-  //       },
-  //       hide: {
-  //         opacity: 0,
-  //       }
-  //     })
-  //   } else {
-  //     this.setState({
-  //       showProject: {
-  //         display: 'none'
-  //       },
-  //       hide: {
-  //         opacity: 1,
-  //         transition: 'opacity .5s ease-in-out',
-  //       }
-  //     })
-  //   }
-  //   this.scrolltoTop();
-  //   console.log('initial index is ' + this.state.index);
-  // }
+  //Render the selected project
   renderProjectData(e) {
     console.log('Rendering project:', e.currentTarget.id);
     let project = this.selectProject(e.currentTarget.id);
@@ -111,13 +71,9 @@ class Projects extends React.Component {
         technologies: project.data.technologies,
         image: project.data.images.image1,
         images: project.data.images,
-        image1: project.data.images[0],
-        image2: project.data.images[1],
-        image3: project.data.images[2],
         appLink: project.data.appLink,
         githubLink: project.data.githubLink,
         showProject: {
-          zIndex: 0,
           opacity: 1,
           transition: 'opacity .5s ease-in-out',
         },
@@ -142,7 +98,7 @@ class Projects extends React.Component {
     console.log('initial index is ' + this.state.index);
   }
 
-  //For single project render
+  //For selected project render ^^^^
   scrolltoTop() {
     window.scroll({top: 0, left: 0, behavior: 'smooth'});
   }
@@ -158,20 +114,20 @@ class Projects extends React.Component {
     }
   }
 
-  //Render the projects to the component
+  //Render all project thumbnails to the component
   renderProjectImages() {
     return (
-            <div style={this.state.show}>
-              <div className="flex"><h1>Projects I've created or contributed to:</h1></div>
-              <div className="projects">
-                {this.state.projects.map((project) =>(
-                  <div onClick={this.handleClicked} className="project" id={project.id}>
-                    <img className="project-img" src={project.data.images[0]}></img>
-                  </div>
-                ))}
-              </div>
+      <div className='fade' style={this.state.show}>
+        <div className="flex"><h1>Projects I've created or contributed to:</h1></div>
+        <div className="projects">
+          {this.state.projects.map((project) =>(
+            <div onClick={this.handleClicked} className="project" id={project.id}>
+              <img className="project-img" src={project.data.images[0]}></img>
             </div>
-          )
+          ))}
+        </div>
+      </div>
+    )
   }
 
   //Arrow functions for selected project image slider
@@ -209,6 +165,7 @@ class Projects extends React.Component {
   //   })
   // }
 
+  //Map dot nav indicators to selected project
   renderDots() {
     if (this.state.images) {
       return (
@@ -221,14 +178,12 @@ class Projects extends React.Component {
     }
   }
 
-  //Selceted project images
-  renderSelectedImages() {
+  //Return the selected project image that mathes the current index
+  renderSelectedImage() {
     console.log(this.state.images);
     if (this.state.images) {
       return (
-        <div>
-          <img className="selected-project-img" src={this.state.images[this.state.index]} ></img>
-        </div>
+        <SelectedImage image={this.state.images[this.state.index]}/>
       )
     }
   }
@@ -256,7 +211,7 @@ class Projects extends React.Component {
           {this.renderProjectImages()}
         </div>
 
-        <div className="numbered-links">
+        <div className="numbered-links fade">
           <div className="links">
             {this.state.projects.map((project) =>(
               <h1 onClick={this.handleClicked} id={project.id}>{count++}</h1>
@@ -265,7 +220,7 @@ class Projects extends React.Component {
           <h1 className="select-project" style={this.state.hide}>Select a Project</h1>
         </div>
 
-        <div className="project-container" style={this.state.showProject}>
+        <div className="project-container fade" style={this.state.showProject}>
           <div className="main project-content">
             <FontAwesome onClick={this.handleClicked} className="x-icon" name="times" size="lg"/>
             <div className="selected-project">
@@ -278,7 +233,13 @@ class Projects extends React.Component {
               <a href={this.state.githubLink} target="blanks">View on GitHub</a>
               <br></br>
               <br></br>
-              {this.renderSelectedImages()}
+
+              <CSSTransitionGroup
+                transitionName='selectedImage'
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={300}>
+              {this.renderSelectedImage()}
+              </CSSTransitionGroup>
 
               <div className="arrow-wrapper">
                 <div className="left-arrow" onClick={this.arrowLeft}>
