@@ -19,6 +19,7 @@ class WebIcons extends React.Component {
   render() {
     return(
       <div className="webicons">
+        <h1>Abilities</h1>
         <div className="webicons-inner">
 
           <div className="webicon-wrap">
@@ -85,6 +86,7 @@ class WebIcons extends React.Component {
             </div>
             <h2 className='hover'>Kettlebells</h2>
           </div>
+          
         </div>
 
       </div>

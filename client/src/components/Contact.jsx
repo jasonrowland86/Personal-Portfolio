@@ -37,7 +37,8 @@ class Contact extends React.Component {
           marginBottom: '3vh',
           color: '#222324',
           transition: 'none',
-          transform: 'none'
+          transform: 'none',
+          width: '50vw'
         }
       });
     }
@@ -54,7 +55,7 @@ class Contact extends React.Component {
 
         <div className="contact-form">
 
-          <h1 onClick={this.handleClicked} style={this.state.switchStyle}>Contact</h1>
+          <h1 id="connect" onClick={this.handleClicked} style={this.state.switchStyle}>Contact</h1>
 
           <form style={this.state.dropDown} id="gform" action="https://script.google.com/macros/s/AKfycbykilkmzLY8Y0ZjvNTiDsxWociKdvOBCbftGNRGJdkUlt8NXxs/exec" method="POST">
             <label for="name">Name:</label><br></br>

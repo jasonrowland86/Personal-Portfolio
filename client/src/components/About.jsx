@@ -15,9 +15,6 @@ const About = () => {
             web development. I have a proclivity for efficiency and a love for
             design that create a natural passion for front-end development and
             user experience.
-            <br></br>
-            <br></br>
-            <div className="center-on-mobile">I am currently seeking opportunities in Austin TX.</div>
           </p>
         </div>
       </div>

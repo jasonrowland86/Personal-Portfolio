@@ -21,7 +21,6 @@ const Main = () => {
           <hr></hr>
         </div>
         <About />
-        <h1 style={{fontSize: '1.5em', marginBottom: '.5em'}}>Abilities</h1>
         <WebIcons />
         <Contact />
       </div>
