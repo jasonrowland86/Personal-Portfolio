@@ -3,15 +3,12 @@ import './App.css';
 import './reset.css';
 import {
   BrowserRouter as Router,
-  Link,
   Route,
-  Redirect,
 } from 'react-router-dom';
 //Main Content
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Main from './components/Main';
-import About from './components/About';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
 

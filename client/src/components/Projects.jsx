@@ -3,7 +3,6 @@ import FontAwesome from 'react-fontawesome';
 import projects from '../projects.js';
 import Dot from './Dot';
 import SelectedImage from './SelectedImage';
-import { CSSTransitionGroup } from 'react-transition-group';
 
 class Projects extends React.Component {
   constructor() {
@@ -14,7 +13,8 @@ class Projects extends React.Component {
       clicked: false,
       showProject: {
         display: 'none'
-      }
+      },
+      hover: false
     }
     this.handleClicked = this.handleClicked.bind(this);
     this.arrowRight = this.arrowRight.bind(this);
@@ -64,6 +64,7 @@ class Projects extends React.Component {
   renderProjectData(e) {
     console.log('Rendering project:', e.currentTarget.id);
     let project = this.selectProject(e.currentTarget.id);
+    this.scrolltoTop();
     if(project) {
       this.setState({
         name: project.data.name,
@@ -94,7 +95,7 @@ class Projects extends React.Component {
         }
       })
     }
-    this.scrolltoTop();
+    // this.scrolltoTop();
     console.log('initial index is ' + this.state.index);
   }
 
@@ -122,7 +123,8 @@ class Projects extends React.Component {
         <div className="projects">
           {this.state.projects.map((project) =>(
             <div onClick={this.handleClicked} className="project" id={project.id}>
-              <img className="project-img" src={project.data.images[0]}></img>
+              <img className="project-img" src={project.data.images[0]} alt="Selected Project"></img>
+              <div className="view-project"><h1>View Project</h1></div>
             </div>
           ))}
         </div>
@@ -226,7 +228,7 @@ class Projects extends React.Component {
             <div className="selected-project">
               <h1>{this.state.name}</h1>
               <br></br>
-              <h2 style={{marginBottom: '1em'}}>{this.state.description}</h2>
+              <h3 style={{marginBottom: '1em'}}>{this.state.description}</h3>
               <h3>{this.state.technologies}</h3>
               <a href={this.state.appLink} target="blanks">View App</a>
               <br></br>
@@ -234,12 +236,7 @@ class Projects extends React.Component {
               <br></br>
               <br></br>
 
-              <CSSTransitionGroup
-                transitionName='selectedImage'
-                transitionEnterTimeout={500}
-                transitionLeaveTimeout={300}>
               {this.renderSelectedImage()}
-              </CSSTransitionGroup>
 
               <div className="arrow-wrapper">
                 <div className="left-arrow" onClick={this.arrowLeft}>
