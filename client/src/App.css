@@ -449,6 +449,10 @@ a {
 	cursor: pointer;
 	color: #222324;
 }
+.portfolio-link {
+	text-align: center;
+	margin-bottom: 1em;
+}
 
 /*-----Contact Form-----*/
 .contact {
