@@ -6,7 +6,7 @@ class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      project: this.props.project,
+      project: '',
       index: 0
     }
     this.arrowRight = this.arrowRight.bind(this);
@@ -15,6 +15,7 @@ class Project extends React.Component {
   }
 
   componentDidMount() {
+    this.setState({project: this.props.project});
     window.addEventListener('keydown', this.handleArrowKey);
   }
 
@@ -56,10 +57,17 @@ class Project extends React.Component {
   //Return the selected project image that mathes the current index
   renderSelectedImage() {
     console.log(this.state.images);
+    console.log(this.props.id);
     if (this.state.images) {
-      return (
-        <img className="selected-project-img" src={this.state.images[this.state.index]}/>
-      )
+      if (this.props.project.id == 1) {
+        return (
+          <img className="selected-project-img border" src={this.state.images[this.state.index]}/>
+        )
+      } else {
+        return (
+          <img className="selected-project-img" src={this.state.images[this.state.index]}/>
+        )
+      }
     }
   }
 
@@ -112,7 +120,8 @@ class Project extends React.Component {
        opacity: 1,
        marginTop: '25vh',
        transition: 'opacity .5s ease-in-out',
-     }
+     },
+     index: 0,
    })
    this.props.showProjects();
    }

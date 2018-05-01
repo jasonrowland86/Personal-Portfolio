@@ -376,6 +376,9 @@ a {
   height: 100%;
   margin-bottom: 3em;
 }
+.border {
+	border: 1px solid black;
+}
 
 .view-project {
 	text-align: center;

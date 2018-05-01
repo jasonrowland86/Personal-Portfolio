@@ -138,10 +138,10 @@ class Projects extends React.Component {
         </div>
 
         <div className="project-container fade" style={this.state.showProject}>
-          <Project project={this.state.project} showProjects={this.showProjects.bind(this)}/>
+          <Project project={this.state.project} showProjects={this.showProjects.bind(this)} key={this.state.projects.id}/>
         </div>
 
-        <div className="portfolio-link">
+        <div className="portfolio-link" style={this.state.show}>
           <h1><a href="https://github.com/jasonrowland86/Personal-Portfolio" target="blanks">View this site on GitHub here</a></h1>
         </div>
 
