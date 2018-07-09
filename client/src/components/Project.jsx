@@ -59,13 +59,13 @@ class Project extends React.Component {
     console.log(this.state.images);
     console.log(this.props.id);
     if (this.state.images) {
-      if (this.props.project.id == 1) {
+      if (this.props.project.id === 1) {
         return (
-          <img className="selected-project-img border" src={this.state.images[this.state.index]}/>
+          <img className="selected-project-img border" src={this.state.images[this.state.index]} alt=''/>
         )
       } else {
         return (
-          <img className="selected-project-img" src={this.state.images[this.state.index]}/>
+          <img className="selected-project-img" src={this.state.images[this.state.index]} alt=''/>
         )
       }
     }
@@ -127,7 +127,6 @@ class Project extends React.Component {
    }
 
   render() {
-    let project = this.props.project.data;
     if(this.props.project) {
       return(
         <div className="main project-content" style={this.state.show}>
