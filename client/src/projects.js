@@ -2,6 +2,21 @@ const projects = [
   {
     id: '1',
     data: {
+      name: 'E and E Automotive Services',
+      description: 'A simple information website for a local business that needed a web presence. I incorporated the Google Maps Embeded API and the Yelp Reviews API to dynamically display the most current Yelp user reviews.',
+      technologies: 'HTML, CSS, Javascript, Node, Express',
+      images: [
+        'https://s3.us-east-2.amazonaws.com/jasonrowland.co/eande-1.png',
+        'https://s3.us-east-2.amazonaws.com/jasonrowland.co/eande-2.png',
+        'https://s3.us-east-2.amazonaws.com/jasonrowland.co/eande-3.png'
+      ],
+      appLink: 'https://eandeautomotiveservices.herokuapp.com/',
+      githubLink: 'https://github.com/jasonrowland86/eandeautomotiveservices',
+    }
+  },
+  {
+    id: '2',
+    data: {
       name: 'Wholeskyhealingarts.com',
       description: 'A personal business site.',
       technologies: 'HTML, CSS, Javascript, React, Express',
@@ -16,7 +31,7 @@ const projects = [
     }
   },
   {
-    id: '2',
+    id: '3',
     data: {
       name: 'Aquarium App',
       description: 'A Ruby on Rails CRUD web app that uses CSS animations to make an aquarium of fish swim around.',
@@ -31,7 +46,7 @@ const projects = [
     }
   },
   {
-    id: '3',
+    id: '4',
     data: {
       name: 'UFC Fight Pick App',
       description: 'A web app that uses the Express MVC and the isomorphic-fetch API to let users search for and compare two fighters. A user can make and save their fight picks for an up coming event.',
@@ -46,7 +61,7 @@ const projects = [
     }
   },
   {
-    id: '4',
+    id: '5',
       data: {
       name: 'Okurio Project Managment',
       description: 'A collaborative project I worked on to build a project management web app. Built with React and Express, an admin can create and manage a project by assigning tasks to project memebers.',
@@ -59,7 +74,7 @@ const projects = [
     }
   },
   {
-    id: '5',
+    id: '6',
     data: {
       name: 'Simon',
       description: 'The classic game Simon. Made with Javascript.',
@@ -71,7 +86,7 @@ const projects = [
       appLink: 'http://jasonrowland-simongame.bitballoon.com/',
       githubLink: 'https://github.com/jasonrowland86/Simon-Game',
     }
-  },
+  }
 ]
 console.log('Projects loaded');
 
