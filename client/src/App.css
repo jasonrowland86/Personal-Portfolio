@@ -364,7 +364,12 @@ a {
 .project:hover .view-project {
 	opacity: 1;
 }
-
+.border {
+	border: 1px solid black;
+}
+.project:hover .border {
+	border: 1px solid rgba(0, 0, 0, 0);
+}
 .project-img {
 	background-size: cover;
   width: 43vw;
@@ -376,13 +381,10 @@ a {
   height: 100%;
   margin-bottom: 3em;
 }
-.border {
-	border: 1px solid black;
-}
-
 .view-project {
 	text-align: center;
   position: absolute;
+	border: 1px solid rgba(0, 0, 0, 0);
 	border-top: 20px solid #64E8B7;
   width: 43vw;
   z-index: 999;

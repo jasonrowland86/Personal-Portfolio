@@ -59,7 +59,7 @@ class Project extends React.Component {
     console.log(this.state.images);
     console.log(this.props.id);
     if (this.state.images) {
-      if (this.props.project.id === 1) {
+      if (this.props.project.id == 1) {
         return (
           <img className="selected-project-img border" src={this.state.images[this.state.index]} alt=''/>
         )
